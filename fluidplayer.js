@@ -8125,12 +8125,14 @@ var fluidPlayerClass = {
      */
     checkIfVolumebarIsRendered: function() {
         var player = this;
-        var volumeposTag = document.getElementById(player.videoPlayerId + '_fluid_control_volume_currentpos');
-        var volumebarTotalWidth = document.getElementById(player.videoPlayerId + '_fluid_control_volume').clientWidth;
-        var volumeposTagWidth = volumeposTag.clientWidth;
+        if(player) {
+            var volumeposTag = document.getElementById(player.videoPlayerId + '_fluid_control_volume_currentpos');
+            var volumebarTotalWidth = document.getElementById(player.videoPlayerId + '_fluid_control_volume').clientWidth;
+            var volumeposTagWidth = volumeposTag.clientWidth;
 
-        if (volumeposTagWidth === volumebarTotalWidth) {
-            return false;
+            if (volumeposTagWidth === volumebarTotalWidth) {
+                return false;
+            }
         }
 
         return true;
