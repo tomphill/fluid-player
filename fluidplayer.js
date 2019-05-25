@@ -4837,5 +4837,11 @@ var fluidPlayerClass = {
         }
 
         this.initLogo();
+    },
+
+    destroy: function(){
+        console.log('destroy');
+        const instance = fluidPlayerClass.instances.find(this.videoPlayerId);
+        console.log(instance);
     }
 };
