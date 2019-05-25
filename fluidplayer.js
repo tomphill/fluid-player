@@ -4408,8 +4408,6 @@ var fluidPlayerClass = {
                 }
             }
 
-
-
             player = null;
             videoPlayer = null;
         };
