@@ -4391,10 +4391,9 @@ var fluidPlayerClass = {
                 player.contolProgressbarUpdate(player.videoPlayerId);
                 player.contolDurationUpdate(player.videoPlayerId);
             }
-        }
+        };
 
         player.destroy = () => {
-            var instance;
 
             window.removeEventListener('click', player.handleClickOutside);
             document.removeEventListener('timeupdate', player.onTimeUpdate);
@@ -4404,7 +4403,6 @@ var fluidPlayerClass = {
                 const found = videoPlayerInstance.videoPlayerId === idVideoPlayer;
 
                 if(found){
-                    console.log('FOUND');
                     fluidPlayerClass.instances.splice(i, 1);
                     break;
                 }
