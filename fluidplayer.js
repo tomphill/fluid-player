@@ -4383,6 +4383,10 @@ var fluidPlayerClass = {
         var player = this;
         var videoPlayer = document.getElementById(idVideoPlayer);
 
+        player.destroy = () => {
+            console.log(fluidPlayerClass);
+        };
+
         videoPlayer.setAttribute('playsinline', '');
         videoPlayer.setAttribute('webkit-playsinline', '');
 
